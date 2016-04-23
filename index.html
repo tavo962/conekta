@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html data-ng-app="app" data-ng-controller="PayController">
+	<head>
+		<title>Conekta</title>
+
+		<meta charset="utf-8" />
+	</head>
+	<body>
+		<form name="form" novalidate="novalidate">
+			<label>Name</label>
+			<input data-ng-model="card.name" type="text" />
+
+			<label>Card Number</label>
+			<input data-ng-model="card.number" type="text" />
+
+			<label>Date (MM/AAAA)</label>
+			<input data-ng-model="card.exp_month" type="text" />
+			<input data-ng-model="card.exp_year" type="text" />
+
+			<label>CVC</label>
+			<input data-ng-model="card.cvc" type="text" />
+
+			<button type="submit" data-ng-click="pay( card )">Pay</button>
+		</form>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+		<script src="https://conektaapi.s3.amazonaws.com/v0.3.2/js/conekta.js"></script>
+		<script src="js/app.js"></script>
+	</body>
+</html>
